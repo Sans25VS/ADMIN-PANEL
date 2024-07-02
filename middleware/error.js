@@ -9,7 +9,7 @@ const errorHandler = (err, req, res, next) => {
     const message = `Duplicate Field value entered`;
     error = new ErrorResponse(message, 400);
   }
-
+// validation error we get too much nested objects of err
   if (err.name === "ValidationError") {
     const message = Object.values(err.errors).map((val) => val.message);
     error = new ErrorResponse(message, 400);
