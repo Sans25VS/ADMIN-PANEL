@@ -70,7 +70,7 @@ exports.forgotPassword = async (req, res, next) => {
     // Create reset url to email to provided email
     const resetUrl = `http://localhost:3000/passwordreset/${resetToken}`;
 
-    // HTML Message
+    // HTML Message backtick 
     const message = `
       <h1>You have requested a password reset</h1>
       <p>Please make a put request to the following link:</p>
